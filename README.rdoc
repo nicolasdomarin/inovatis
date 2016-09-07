@@ -1,28 +1,11 @@
-== README
+#<u> INOVATIS </u>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+INOVATIS is a school project we have been assigned to do.
+This project is composed of 4 parts:
 
-Things you may want to cover:
+* An e-commerce website</li>
+* A heavy client to manage the orders and the stock</li>
+* An extranet website to manage the "company" and the collaborators</li>
+* An Android application that has the same us as the extranet</li>
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Here we will talk about the e-commerce solution.
