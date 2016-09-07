@@ -8,19 +8,19 @@
   </div>
 
   <div class="field">
-    <%= f.text_field :nom, autofocus: true %>
+    <%= f.text_field :nom %>
   </div>
 
   <div class="field">
-    <%= f.text_field :adresse, autofocus: true %>
+    <%= f.text_field :adresse%>
   </div>  
 
   <div class="field">
-    <%= f.number_field :cp, autofocus: true %>
+    <%= f.number_field :cp%>
   </div>
 
   <div class="field">
-    <%= f.email_field :email, autofocus: true, placeholder: "Ex: votre@mail.com" %>
+    <%= f.email_field :email, placeholder: "Ex: votre@mail.com" %>
   </div>
 
   <div class="field">
@@ -33,8 +33,14 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.check_box :admin %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+
+<!-- Users.create(:email => 'tom@inovatis.com', :password => 'admin123', :password_confirmation => 'admin123', :admin => true, :nom => 'Masson', :prenom => 'Thomas') -->
 

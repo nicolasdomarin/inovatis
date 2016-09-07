@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  # Fais appel à la méthode permettant de restreindre l'accès uniquement aux admins
+  before_filter :authorize_admin, only: :index
+
   # GET /users
   # GET /users.json
   def index

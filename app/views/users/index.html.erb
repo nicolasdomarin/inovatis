@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Users</h1>
 
 <table class="table table-striped">
@@ -7,6 +5,7 @@
     <tr>
       <th>Nom</th>
       <th>Email</th>
+      <th>Admin?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,11 +13,15 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.prenom %> <%= user.nom %></td>
+        <td><%= user.nom %></td>
         <td><%= user.email %></td>
+        <td><%= user.admin %></td>
         <td><%= link_to '<i class="glyphicon glyphicon-eye-open"></i>'.html_safe, user, class: "btn btn-info" %></td>
+        <%if current_user.try(:admin?) %>
         <td><%= link_to '<i class="glyphicon glyphicon-edit"></i>'.html_safe, edit_user_path(user), class: "btn btn-warning" %></td>
-        <td><%= link_to '<i class="glyphicon glyphicon-remove"></i>'.html_safe, user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+        <td><%= link_to '<i class="glyphicon glyphicon-remove"></i>'.html_safe, user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+         <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
