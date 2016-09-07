@@ -1,0 +1,12 @@
+<h1>Editing Produit</h1>
+
+<%= bootstrap_form_for (@produit) do |f| %>
+  <%= f.text_field :libelle, :autofocus => true %>
+  <%= f.text_area :description, :autofocus => true %>
+  <%= f.number_field :prix, :autofocus => true %>	
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Show', @produit %> |
+<%= link_to 'Back', produits_path %>

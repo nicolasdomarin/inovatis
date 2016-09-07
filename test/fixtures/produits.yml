@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  libelle: MyString
+  description: MyText
+  prix: 9.99
+
+two:
+  libelle: MyString
+  description: MyText
+  prix: 9.99
