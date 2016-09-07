@@ -1,4 +1,4 @@
-#<u> INOVATIS </u>
+# INOVATIS 
 
 INOVATIS is a school project we have been assigned to do.
 This project is composed of 4 parts:
