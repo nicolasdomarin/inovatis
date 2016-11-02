@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag @produit.photo.url(:medium) %>
+</p>
+
+<p>
   <strong>Libelle:</strong>
   <%= @produit.libelle %>
 </p>
@@ -15,5 +19,6 @@
   <%= @produit.prix %>
 </p>
 
+<a href="/panier/<% @produit.id %>"> Add </a>
 <%= link_to 'Edit', edit_produit_path(@produit) %> |
 <%= link_to 'Back', produits_path %>

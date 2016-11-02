@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Navbar Template for Bootstrap</title>
+    <title>INOVATIS - Quality Delivery</title>
 
 
     <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -61,19 +61,6 @@
               <li><a href="#">Informatique</a></li>
               <li><a href="#">Promotions</a></li>
               <li><a href="#"></a></li>
-
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
               
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -88,7 +75,10 @@
               <li><%= link_to 'Profile', edit_user_registration_path %></li>
               <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
               <%if current_user.try(:admin?) %>
+              <li role="separator" class="divider"></li>
                 <li><%= link_to 'Products', produits_path %></li>
+                <li><%= link_to 'Users', users_path %></li>
+                <li><%= link_to 'Panier', panier_path %>
               <% end %>
             </ul>
           </li>

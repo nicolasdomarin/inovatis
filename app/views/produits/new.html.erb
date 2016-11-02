@@ -1,11 +1,13 @@
 <h2>New Produit</h2>
 
-<%= bootstrap_form_for (@produit) do |f| %>
+<%= bootstrap_form_for (@produit), :html => { :multipart => true } do |f| %>
   <%= f.text_field :libelle %>
 
   <%= f.text_area :description %>
 
   <%= f.number_field :prix %>
+
+  <%= f.file_field :photo %>
 
   <%= f.submit %>
 

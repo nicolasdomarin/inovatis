@@ -1,12 +1,15 @@
 class ProduitsController < ApplicationController
   before_action :set_produit, only: [:show, :edit, :update, :destroy]
-
   # GET /produits
   # GET /produits.json
   def index
     @produits = Produit.all
   end
 
+  def nouveaute
+    @produit = Produit.find(params[:id])
+    @produits = Produit.order("created_at desc").limit(4).offset(1)
+  end
   # GET /produits/1
   # GET /produits/1.json
   def show
@@ -14,7 +17,7 @@ class ProduitsController < ApplicationController
 
   # GET /produits/new
   def new
-    @produit = Produit.new
+    @produit = Produit.new(params[:produit])
   end
 
   # GET /produits/1/edit
@@ -69,6 +72,6 @@ class ProduitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def produit_params
-      params.require(:produit).permit(:libelle, :description, :prix)
+      params.require(:produit).permit(:libelle, :description, :prix, :photo)
     end
 end

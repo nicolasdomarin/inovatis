@@ -5,6 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Paperclip.options[:command_path] = 'C:\Program Files\ImageMagick-6.8.9'
 
 module Inovatis
   class Application < Rails::Application

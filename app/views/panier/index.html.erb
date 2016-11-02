@@ -1,0 +1,19 @@
+<h1>Votre Panier</h1>
+
+<% link_to 'Vider', panier_clear_path %>
+<br><br>
+<% total = 0 %>
+
+<ul>
+<% @panier.each do | id, quantity | %>
+	<% produit = Produit.find_by_id(id) %>
+	<li>
+		<% link_to produit.libelle, produit %>
+		<p><%= produit.description %></p>
+		<p><% number_to_currency(produit.prix, :unit => '€')%> </p>
+		<p>Quantity: <%= quantity %> </p>
+	</li>
+	<% total += quantity * produit.prix %>
+<% end %>
+<p><%= number_to_currency(total, :unit => '€') %></p>
+</ul>

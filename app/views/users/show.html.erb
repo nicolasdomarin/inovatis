@@ -1,6 +1,8 @@
-<p id="notice"><%= notice %></p>
+<h2><strong><%= @user.prenom %> <%= @user.nom %></strong></h2>
 
-<strong><%= @user.email %></strong>
+<p><h4><%= @user.email %></h4>
+<%= @user.adresse %>
+<%= @user.cp %></p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

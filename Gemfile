@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'paperclip'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -31,6 +32,14 @@ gem 'bootstrap-glyphicons'
 
 # Authentification 
 gem 'devise', '3.4.1'
+
+#image
+
+gem 'cocaine' 
+
+# Pagination
+
+gem 'will_paginate'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
