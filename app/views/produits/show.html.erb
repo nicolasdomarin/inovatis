@@ -19,6 +19,6 @@
   <%= @produit.prix %>
 </p>
 
-<a href="/panier/<% @produit.id %>"> Add </a>
+<a href="/panier/<%= @produit.id %>"> Add </a>
 <%= link_to 'Edit', edit_produit_path(@produit) %> |
 <%= link_to 'Back', produits_path %>

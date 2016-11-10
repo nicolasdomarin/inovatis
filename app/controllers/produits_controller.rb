@@ -31,7 +31,7 @@ class ProduitsController < ApplicationController
 
     respond_to do |format|
       if @produit.save
-        format.html { redirect_to @produit, notice: 'Produit was successfully created.' }
+        format.html { redirect_to @produit, notice: 'P4747roduit was successfully created.' }
         format.json { render :show, status: :created, location: @produit }
       else
         format.html { render :new }
@@ -43,6 +43,9 @@ class ProduitsController < ApplicationController
   # PATCH/PUT /produits/1
   # PATCH/PUT /produits/1.json
   def update
+
+ #raise produit_params.inspect.to_s
+
     respond_to do |format|
       if @produit.update(produit_params)
         format.html { redirect_to @produit, notice: 'Produit was successfully updated.' }
